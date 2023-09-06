@@ -10,7 +10,7 @@ class Modal extends Component {
   };
 
   handlerOnClick = event => {
-    if (event.targe === event.currentTarget) {
+    if (event.target === event.currentTarget) {
       this.props.onClose();
     }
   };
@@ -25,10 +25,10 @@ class Modal extends Component {
 
   render() {
     return (
-      <StyledOverlay onClick={this.onClick}>
+      <StyledOverlay onClick={this.handlerOnClick}>
         <StyledModal>
           <img
-            src={this.props.modalData.modalURL}
+            src={this.props.modalData.modalUrl}
             alt={this.props.modalData.alt}
           />
         </StyledModal>
