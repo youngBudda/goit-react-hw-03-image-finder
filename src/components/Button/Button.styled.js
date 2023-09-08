@@ -27,6 +27,6 @@ export const StyledButton = styled.button`
   }
 
   &:disabled {
-    opacity: 0.4;
+    display: none;
   }
 `;

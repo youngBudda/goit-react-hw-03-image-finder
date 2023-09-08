@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Searchbar = ({ onSearchPictures }) => {
   const handlerSubmit = evt => {
     evt.preventDefault();
-    onSearchPictures(evt.target.elements.search.value);
+    onSearchPictures(evt.target.elements.search.value.toLowerCase().trim());
   };
 
   return (
@@ -14,6 +14,7 @@ const Searchbar = ({ onSearchPictures }) => {
           <span>Search</span>
         </button>
         <input
+          required
           name="search"
           type="text"
           autoComplete="off"

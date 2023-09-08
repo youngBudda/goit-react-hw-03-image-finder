@@ -45,9 +45,7 @@ export class App extends Component {
   };
 
   onSearchPictures = value => {
-    this.setState({ page: 1, images: [] });
-    const normalizedValue = value.toLowerCase().trim();
-    this.setState({ value: normalizedValue });
+    this.setState({ page: 1, images: [], value });
   };
 
   loadMore = () => {
